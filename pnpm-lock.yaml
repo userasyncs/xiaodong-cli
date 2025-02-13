@@ -27,6 +27,9 @@ importers:
       '@rollup/plugin-terser':
         specifier: ^0.4.4
         version: 0.4.4(rollup@4.34.6)
+      '@types/figlet':
+        specifier: ^1.7.0
+        version: 1.7.0
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
@@ -45,12 +48,18 @@ importers:
       commander:
         specifier: ^13.1.0
         version: 13.1.0
+      figlet:
+        specifier: ^1.8.0
+        version: 1.8.0
       fs-extra:
         specifier: ^11.3.0
         version: 11.3.0
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
+      log-symbols:
+        specifier: ^7.0.0
+        version: 7.0.0
       ora:
         specifier: ^8.2.0
         version: 8.2.0
@@ -367,6 +376,9 @@ packages:
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
 
+  '@types/figlet@1.7.0':
+    resolution: {integrity: sha512-KwrT7p/8Eo3Op/HBSIwGXOsTZKYiM9NpWRBJ5sVjWP/SmlS+oxxRvJht/FNAtliJvja44N3ul1yATgohnVBV0Q==}
+
   '@types/fs-extra@11.0.4':
     resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
 
@@ -524,6 +536,11 @@ packages:
       picomatch:
         optional: true
 
+  figlet@1.8.0:
+    resolution: {integrity: sha512-chzvGjd+Sp7KUvPHZv6EXV5Ir3Q7kYNpCr4aHrRW79qFtTefmQZNny+W1pW9kf5zeE6dikku2W50W/wAH2xWgw==}
+    engines: {node: '>= 0.4.0'}
+    hasBin: true
+
   find-cache-dir@3.3.2:
     resolution: {integrity: sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig==}
     engines: {node: '>=8'}
@@ -625,6 +642,10 @@ packages:
 
   log-symbols@6.0.0:
     resolution: {integrity: sha512-i24m8rpwhmPIS4zscNzK6MSEhk0DUWa/8iYQWxhffV8jkI4Phvs3F+quL5xvS0gdQR0FyTCMMH33Y78dDTzzIw==}
+    engines: {node: '>=18'}
+
+  log-symbols@7.0.0:
+    resolution: {integrity: sha512-zrc91EDk2M+2AXo/9BTvK91pqb7qrPg2nX/Hy+u8a5qQlbaOflCKO+6SqgZ+M+xUFxGdKTgwnGiL96b1W3ikRA==}
     engines: {node: '>=18'}
 
   log-update@2.3.0:
@@ -859,6 +880,10 @@ packages:
 
   yoctocolors-cjs@2.1.2:
     resolution: {integrity: sha512-cYVsTjKl8b+FrnidjibDWskAv7UKOfcwaVZdp/it9n1s9fU3IkgDbhdIRKCW4JDsAlECJY0ytoVPT3sK6kideA==}
+    engines: {node: '>=18'}
+
+  yoctocolors@2.1.1:
+    resolution: {integrity: sha512-GQHQqAopRhwU8Kt1DDM8NjibDXHC8eoh1erhGAJPEyveY9qqVeXvVikNKrDz69sHowPMorbPUrH/mx8c50eiBQ==}
     engines: {node: '>=18'}
 
 snapshots:
@@ -1117,6 +1142,8 @@ snapshots:
 
   '@types/estree@1.0.6': {}
 
+  '@types/figlet@1.7.0': {}
+
   '@types/fs-extra@11.0.4':
     dependencies:
       '@types/jsonfile': 6.1.4
@@ -1240,6 +1267,8 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.2
 
+  figlet@1.8.0: {}
+
   find-cache-dir@3.3.2:
     dependencies:
       commondir: 1.0.1
@@ -1328,6 +1357,11 @@ snapshots:
     dependencies:
       chalk: 5.4.1
       is-unicode-supported: 1.3.0
+
+  log-symbols@7.0.0:
+    dependencies:
+      is-unicode-supported: 2.1.0
+      yoctocolors: 2.1.1
 
   log-update@2.3.0:
     dependencies:
@@ -1572,3 +1606,5 @@ snapshots:
       strip-ansi: 6.0.1
 
   yoctocolors-cjs@2.1.2: {}
+
+  yoctocolors@2.1.1: {}

@@ -2,6 +2,8 @@ import { simpleGit } from "simple-git";
 import type { SimpleGit, SimpleGitOptions } from "simple-git";
 import Logger from "progress-estimator";
 import chalk from "chalk";
+import { log } from "../utils/log";
+import { goodPrinter } from "./printer";
 
 chalk.level = 2; // 颜色深度
 const gitOptions: Partial<SimpleGitOptions> = {
@@ -34,12 +36,13 @@ export const clone = async (downloadUrl: string, projectName: string, options: s
     console.log(chalk.blueBright(`==================================`));
     console.log();
     console.log();
-    console.info(`${chalk.blue(projectName)} 项目创建成功`);
-    console.log("执行以下命令运行项目：");
-    console.info(`  ${chalk.green(`cd ${projectName}`)}`);
-    console.info(`  ${chalk.green(`pnpm install`)}`);
-    console.info(`  ${chalk.green(`pnpm run dev`)}`);
+    await goodPrinter("xiaodong-cli");
+    log.success(`${chalk.blue(projectName)} 项目创建成功`);
+    log.success("执行以下命令运行项目：");
+    log.info(`  ${chalk.green(`cd ${projectName}`)}`);
+    log.info(`  ${chalk.green(`pnpm install`)}`);
+    log.info(`  ${chalk.green(`pnpm run dev`)}`);
   } catch (error) {
-    console.log("下载代码失败：", chalk.red(error));
+    log.error(`"下载代码失败："${chalk.red(error)}`);
   }
 };

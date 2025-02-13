@@ -1,6 +1,6 @@
 {
   "name": "xiaodong-cli",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "xiaodong-cli脚手架",
   "main": "dist/index.js",
   "files": [

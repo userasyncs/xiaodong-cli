@@ -9,7 +9,7 @@
     "README.md"
   ],
   "bin": {
-    "xiaodong-cli": "bin/index.js"
+    "xiaodong": "bin/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -29,10 +29,14 @@
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@types/fs-extra": "^11.0.4",
+    "@types/lodash": "^4.17.15",
     "@types/node": "^22.13.1",
+    "axios": "^1.7.9",
     "chalk": "^5.4.1",
     "commander": "^13.1.0",
     "fs-extra": "^11.3.0",
+    "lodash": "^4.17.21",
+    "ora": "^8.2.0",
     "progress-estimator": "^0.3.1",
     "rollup": "^4.34.6",
     "rollup-plugin-node-externals": "5.1.2",

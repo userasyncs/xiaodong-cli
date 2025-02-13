@@ -3,6 +3,7 @@ import type { SimpleGit, SimpleGitOptions } from "simple-git";
 import Logger from "progress-estimator";
 import chalk from "chalk";
 
+chalk.level = 2; // 颜色深度
 const gitOptions: Partial<SimpleGitOptions> = {
   baseDir: process.cwd(), // 根目录
   binary: "git", //  git命令
@@ -14,7 +15,7 @@ const gitOptions: Partial<SimpleGitOptions> = {
 const logger = Logger({
   spinner: {
     interval: 300,
-    frames: ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"].map((frame) => chalk.blue(frame)),
+    frames: ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"].map((frame) => chalk.green(frame)),
   },
 });
 
@@ -29,15 +30,15 @@ export const clone = async (downloadUrl: string, projectName: string, options: s
     // 相关提示
     console.log();
     console.log(chalk.blueBright(`==================================`));
-    console.log(chalk.blueBright(`=== 欢迎使用 auto-cli 脚手架 ===`));
+    console.log(chalk.blueBright(`=== 欢迎使用 xiaodong-cli 脚手架 ===`));
     console.log(chalk.blueBright(`==================================`));
     console.log();
     console.log();
     console.info(`${chalk.blue(projectName)} 项目创建成功`);
     console.log("执行以下命令运行项目：");
-    console.info(`  ${chalk.cyan(`cd ${projectName}`)}`);
-    console.info(`  ${chalk.cyan(`pnpm install`)}`);
-    console.info(`  ${chalk.cyan(`pnpm run dev`)}`);
+    console.info(`  ${chalk.green(`cd ${projectName}`)}`);
+    console.info(`  ${chalk.green(`pnpm install`)}`);
+    console.info(`  ${chalk.green(`pnpm run dev`)}`);
   } catch (error) {
     console.log("下载代码失败：", chalk.red(error));
   }

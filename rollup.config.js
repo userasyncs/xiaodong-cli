@@ -13,7 +13,7 @@ export default defineConfig([
     },
     output: {
       dir: "./dist", // 输出目录
-      format: "es", // 输出commonjs规范的文件
+      format: "cjs", // 输出commonjs规范的文件
     },
     plugins: [
       nodeExternals({
